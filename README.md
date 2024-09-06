@@ -31,7 +31,7 @@ Install and Configure MySQL (via XAMPP)
     Start XAMPP and ensure MySQL is running in the Control Panel.
     Create a new MySQL database using phpMyAdmin.
 
-Configure Application Properties
+<h2>Configure Application Properties</h2>
 
 In the src/main/resources/application.properties file, you need to specify the correct database settings.
 
@@ -39,15 +39,15 @@ Here is a sample configuration for MySQL:
 
 properties
 
-# Application Properties for FinanceTracker
+ Application Properties for FinanceTracker
 
-# Database Configuration
+<h2> Database Configuration</h2>
 spring.datasource.url=jdbc:mysql://localhost:3306/<your-database-name>
 spring.datasource.username=root
 spring.datasource.password=
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-# JPA Configuration
+<h2>JPA Configuration</h2>
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
