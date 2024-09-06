@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction - Personal Budgeting App</title>
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5; /* Slightly darker gray background for contrast */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .transaction-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffff; /* White form background */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+        }
+        .form-heading {
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+            color: #343a40; /* Darker color for heading */
+        }
+        .form-label {
+            font-weight: 500;
+            color: #495057; /* Subtle text color */
+        }
+        .form-control, .form-select {
+            border-radius: 8px; /* Rounded corners */
+            border: 1px solid #ced4da; /* Light border */
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+        }
+        .btn-primary {
+            background-color: #007bff; /* Blue color */
+            border-color: #007bff;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="transaction-form">
+        <h2 class="form-heading">Add New Transaction</h2>
+        <form>
+            <div class="mb-3">
+                <label for="transactionDate" class="form-label">Date</label>
+                <input type="date" class="form-control" id="transactionDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="transactionDescription" class="form-label">Description</label>
+                <input type="text" class="form-control" id="transactionDescription" placeholder="Enter description" required>
+            </div>
+            <div class="mb-3">
+                <label for="transactionCategory" class="form-label">Category</label>
+                <select class="form-select" id="transactionCategory" required>
+                    <option selected disabled value="">Choose a category</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                    <option value="savings">Savings</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="transactionAmount" class="form-label">Amount</label>
+                <input type="number" class="form-control" id="transactionAmount" placeholder="Enter amount" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Add Transaction</button>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
